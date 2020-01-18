@@ -1,20 +1,14 @@
 {
-  "name": "sf-react",
+  "name": "react-ecommerce-template1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "js-cookie": "^2.2.0",
-    "node-sass": "^4.12.0",
-    "popper.js": "^1.15.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-medium-zoom": "^1.0.0",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
-    "typescript": "^3.5.3"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
