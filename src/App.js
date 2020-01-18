@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter } from "react-router-dom";
+import Store from './store/Store';
+import { Layout } from './shared/Layout'
+import { PRODUCTS } from './global-definitions';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    localStorage.setItem('products', JSON.stringify(PRODUCTS));
+  }
+  render() {
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <Store>
+            <Layout />
+          </Store>
+        </BrowserRouter>
+      </div>
+    );
+  }
+
 }
 
 export default App;
