@@ -1,0 +1,15 @@
+$layout-min-width: 600px;
+$layout-max-width: 1920px;
+
+.navbar-anchor {
+    color: white;
+  
+    &:hover {
+      color: wheat;
+    }
+}
+
+.navbar-layout {
+  width: $layout-min-width;
+  margin: 0 auto;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { ProductItem } from '../shared/product/ProductItem';
 import { Route, Switch } from 'react-router-dom';
 import { PRODUCTS } from '../global-definitions';
+import { Grid } from '@material-ui/core';
 
 import StoreContext from '../store/StoreContext';
 
@@ -38,27 +39,28 @@ const ProductListSubView = class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: PRODUCTS,
+      products: PRODUCTS
     };
   }
-  
-  componentDidMount = async () => {
-  };
+
+  componentDidMount = async () => {};
 
   render() {
     return (
       <div>
-        <div class="container">
-          <div class="row flex-row-reverse">
-            <div className="col-lg-6 p-4">
-              <ul className="list-inline row">
-                {this.state.products.map(product => (
-                  <ProductItem key={product.product_id} product={product} />
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          spacing={3}
+        >
+          {this.state.products.map(product => (
+            <Grid item xs={2} spacing={3}>
+              <ProductItem key={product.product_id} product={product} />
+            </Grid>
+          ))}
+        </Grid>
       </div>
     );
   }

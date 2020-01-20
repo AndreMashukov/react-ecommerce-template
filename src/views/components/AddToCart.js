@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import CartContext from '../../store/CartContext';
 import { ProductActualPrices } from '../../shared/Utils';
 
@@ -9,10 +8,6 @@ function SetPrice(product, qty, setState) {
 
 async function DispatchToCart(cart, action, setState) {
   await cart.dispatch(action);
-}
-
-function CalcQtyPrice(prod, qty) {
-  return prod.price * qty;
 }
 
 export default props => {

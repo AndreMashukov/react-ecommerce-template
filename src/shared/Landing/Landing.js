@@ -1,15 +1,16 @@
 import React from 'react';
 
 import { Route, Switch } from "react-router-dom";
-import { HomeView } from '../views/Home';
-import { ProductListView } from '../views/ProductList';
-import { ProductShowView } from '../views/ProductShow';
-import { CartView } from '../views/Cart';
-import PageNotFound from '../views/PageNotFound';
+import { HomeView } from '../../views/Home';
+import { ProductListView } from '../../views/ProductList';
+import { ProductShowView } from '../../views/ProductShow';
+import { CartView } from '../../views/Cart';
+import PageNotFound from '../../views/PageNotFound';
+import './Landing.scss';
 
 export const Landing = () => {
   return (
-    <div class='main'>
+    <div class='landing-layout'>
       <Switch>
         <Route exact path="/" component={HomeView} />
         <Route path="/cart" component={CartView} />
