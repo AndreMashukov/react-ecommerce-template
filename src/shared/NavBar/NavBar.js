@@ -19,21 +19,21 @@ export const NavBarSection = class extends React.Component {
     return (
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" color="inherit">
-            <div class="navbar-layout">
+          <div class="navbar-layout">
+            <Typography variant="h6" color="inherit">
               <Grid
                 container
                 direction="row"
-                justify="center"
-                alignItems="center"
-                spacing={3}
+                justify="flex-start"
+                alignItems="flex-start"
+                spacing={2}
               >
-                <Grid item xs={2} spacing={3}>
+                <Grid item>
                   <Link to={'/'} className="navbar-anchor">
                     Home
                   </Link>
                 </Grid>
-                <Grid item xs={8} spacing={3}>
+                <Grid item>
                   <Link to={'/'}>
                     {this.state.categories.map(cat => {
                       return (
@@ -48,14 +48,14 @@ export const NavBarSection = class extends React.Component {
                     })}
                   </Link>
                 </Grid>
-                <Grid item xs={2} spacing={3}>
+                <Grid item>
                   <Link className="navbar-anchor" to={'/cart'}>
                     Cart
                   </Link>
                 </Grid>
               </Grid>
-            </div>
-          </Typography>
+            </Typography>
+          </div>
         </Toolbar>
       </AppBar>
     );

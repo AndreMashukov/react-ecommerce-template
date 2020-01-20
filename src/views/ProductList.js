@@ -51,12 +51,12 @@ const ProductListSubView = class extends React.Component {
         <Grid
           container
           direction="row"
-          justify="center"
-          alignItems="center"
+          justify="flex-start"
+          alignItems="flex-start"
           spacing={3}
         >
           {this.state.products.map(product => (
-            <Grid item xs={2} spacing={3}>
+            <Grid item xs={4} spacing={3}>
               <ProductItem key={product.product_id} product={product} />
             </Grid>
           ))}
