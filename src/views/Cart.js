@@ -45,7 +45,7 @@ export const CartView = () => {
                   <TableBody>
                     {cart.data.cart.items.map(row => (
                       <TableRow key={row.item_id}>
-                        <TableCell align="right">{row.title}</TableCell>
+                        <TableCell align="left">{row.title}</TableCell>
                         <TableCell align="right">{row.qty}</TableCell>
                         <TableCell align="right">{row.price}</TableCell>
                         <TableCell align="right">
