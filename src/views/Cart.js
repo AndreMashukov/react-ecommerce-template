@@ -36,7 +36,7 @@ export const CartView = () => {
                 <Table>
                   <TableHead>
                     <TableRow>
-                      <TableCell align="right">Product Name</TableCell>
+                      <TableCell align="left">Product Name</TableCell>
                       <TableCell align="right">Qty</TableCell>
                       <TableCell align="right">Price</TableCell>
                       <TableCell align="right">&nbsp;</TableCell>
