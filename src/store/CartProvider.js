@@ -4,7 +4,7 @@ import StoreContext from './StoreContext';
 import Cart from './reducers/Cart';
 
 async function CartReducer(state, action, callback) {
-  console.log('state=', state);
+  console.log('CartReducer: state=', state);
   let result = {};
   try {
     switch (action.type) {
@@ -15,7 +15,7 @@ async function CartReducer(state, action, callback) {
         result = Cart.add(state, action.item_id, action.qty);
         break;
       case 'remove':
-        result = Cart.remove(action.item_id);
+        result = Cart.remove(state, action.item_id);
         break;
       default:
         result = state;

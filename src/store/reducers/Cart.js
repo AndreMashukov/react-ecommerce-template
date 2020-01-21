@@ -21,6 +21,12 @@ export default class {
     return state;
   }
 
-  static remove() {
+  static remove(state, item_id) {
+    console.log("Cart remove: ", state);
+    const newState = {...state};
+    const itemIndex = state.cart.items.findIndex(i => i.item_id === item_id);
+    newState.cart.items.splice(itemIndex, 1);
+
+    return newState;
   }
 }  
