@@ -10,7 +10,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 function RemoveItem(cart, item_id) {
-  console.log("RemoveItem ", item_id);
   cart.dispatch({ type: 'remove', item_id: item_id });
 }
 
@@ -47,7 +46,7 @@ export const CartView = () => {
                       <TableRow key={row.item_id}>
                         <TableCell align="left">{row.title}</TableCell>
                         <TableCell align="right">{row.qty}</TableCell>
-                        <TableCell align="right">{row.price}</TableCell>
+                        <TableCell align="right">${row.price}</TableCell>
                         <TableCell align="right">
                           <Button
                             color="primary"

@@ -6,35 +6,6 @@ export function ProductActualPrices(prod) {
   };
 }
 
-export function CartPricing(type, cart) {
-  // Get specific cart price point
-  if (type == 'ship') {
-    return cart.order
-      ? cart.order.shipping
-      : 0 + cart.sample
-      ? cart.sample.shipping
-      : 0 || 0;
-  } else if (type == 'tax') {
-    return cart.order
-      ? cart.order.tax
-      : 0 + cart.sample
-      ? cart.sample.tax
-      : 0 || 0;
-  } else if (type == 'subtotal') {
-    return (
-      ((cart.order && cart.order.total) || 0) -
-      (cart.order
-        ? cart.order.shipping
-        : 0 + cart.sample
-        ? cart.sample.shipping
-        : 0 || 0) -
-      (cart.order ? cart.order.tax : 0 + cart.sample ? cart.sample.tax : 0 || 0)
-    );
-  } else {
-    return (cart.order && cart.order.total) || 0; // grand total;
-  }
-}
-
 export function FormatPrice(price) {
   // Format price, return $ + 2 decimals
   if (price === null) return '$0.00';
