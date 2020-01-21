@@ -23,9 +23,9 @@ export const ProductItem = props => {
               >
                 <Grid item>
                   <Link to={'/product/' + product.item_id}>
-                    {/* <Typography variant="h6" color="primary"> */}
+                    <Typography variant="h6" color="primary">
                       {product.name}
-                    {/* </Typography> */}
+                    </Typography>
                   </Link>
                 </Grid>
                 <Grid item>${pricing.price}</Grid>

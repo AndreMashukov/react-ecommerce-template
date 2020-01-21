@@ -20,7 +20,6 @@ export const NavBarSection = class extends React.Component {
       <AppBar position="static">
         <Toolbar>
           <div className="navbar-layout">
-            {/* <Typography variant="h6" color="inherit"> */}
             <Grid
               container
               direction="row"
@@ -30,7 +29,9 @@ export const NavBarSection = class extends React.Component {
             >
               <Grid item>
                 <Link to={'/'} className="navbar-anchor">
-                  Home
+                  <Typography variant="h6">
+                    Home
+                  </Typography>
                 </Link>
               </Grid>
               <Grid item>
@@ -42,18 +43,21 @@ export const NavBarSection = class extends React.Component {
                       to={'/product-list/' + cat.slug}
                       data-hover="dropdown"
                     >
-                      {cat.name}
+                      <Typography variant="h6">
+                        {cat.name}
+                      </Typography>
                     </Link>
                   );
                 })}
               </Grid>
               <Grid item>
                 <Link className="navbar-anchor" to={'/cart'}>
+                <Typography variant="h6">
                   Cart
+                </Typography>
                 </Link>
               </Grid>
             </Grid>
-            {/* </Typography> */}
           </div>
         </Toolbar>
       </AppBar>

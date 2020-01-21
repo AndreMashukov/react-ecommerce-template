@@ -3,6 +3,7 @@ import './App.scss';
 import { BrowserRouter } from "react-router-dom";
 import Store from './store/Store';
 import { Layout } from './shared/Layout'
+import 'typeface-roboto';
 
 class App extends React.Component {
   render() {
