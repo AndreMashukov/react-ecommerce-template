@@ -18,7 +18,7 @@ export const CartView = () => {
   return (
     <CartContext.Consumer>
       {cart => {
-        return cart === undefined ? null : (
+        return cart ? (
           <Grid
             container
             direction="column"
@@ -63,7 +63,7 @@ export const CartView = () => {
               </TableContainer>
             </Grid>
           </Grid>
-        );
+        ) : null
       }}
     </CartContext.Consumer>
   );
