@@ -5,9 +5,11 @@ import { Typography } from '@material-ui/core';
 
 export const Layout = () => {
   return (
-      <Typography noWrap>
+    <div>
+      {/* <Typography noWrap> */}
         <NavBarSection />
         <Landing />
-      </Typography>
-  )
-}
+      {/* </Typography> */}
+    </div>
+  );
+};

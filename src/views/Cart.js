@@ -27,9 +27,9 @@ export const CartView = () => {
             spacing={3}
           >
             <Grid item>
-              <Typography variant="h6" color="primary">
+              {/* <Typography variant="h6" color="primary"> */}
                 Your Cart
-              </Typography>
+              {/* </Typography> */}
             </Grid>
             <Grid item>
               <TableContainer component={Paper}>

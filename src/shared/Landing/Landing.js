@@ -10,7 +10,7 @@ import './Landing.scss';
 
 export const Landing = () => {
   return (
-    <div class='landing-layout'>
+    <div className ='landing-layout'>
       <Switch>
         <Route exact path="/" component={HomeView} />
         <Route path="/cart" component={CartView} />

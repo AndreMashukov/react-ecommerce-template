@@ -14,9 +14,9 @@ export const HomeView = class extends React.Component {
         spacing={3}
       >
         <Grid item>
-          <Typography variant="h6" color="primary">
+          {/* <Typography variant="h6" color="primary"> */}
             Home
-          </Typography>
+          {/* </Typography> */}
         </Grid>
       </Grid>
     );

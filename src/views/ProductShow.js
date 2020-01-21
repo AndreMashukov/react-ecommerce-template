@@ -28,9 +28,9 @@ export const ProductShowView = class extends React.Component {
         spacing={3}
       >
         <Grid item>
-          <Typography variant="h6" color="primary">
+          {/* <Typography variant="h6" color="primary"> */}
             {prod.title}
-          </Typography>
+          {/* </Typography> */}
         </Grid>
         <Grid item>
           {prod.details}
