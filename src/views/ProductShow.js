@@ -1,7 +1,7 @@
 import React from 'react';
 import AddToCart from './components/AddToCart';
 import { PRODUCTS } from '../global-definitions';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
 export const ProductShowView = class extends React.Component {
   state = {
@@ -28,11 +28,12 @@ export const ProductShowView = class extends React.Component {
         spacing={3}
       >
         <Grid item>
-          <h1>{prod.title}</h1>
+          <Typography variant="h6" color="primary">
+            {prod.title}
+          </Typography>
         </Grid>
         <Grid item>
-          <h3>Details</h3>
-          <p>{prod.details}</p>
+          {prod.details}
         </Grid>
         <Grid item>
           <AddToCart product={prod} />

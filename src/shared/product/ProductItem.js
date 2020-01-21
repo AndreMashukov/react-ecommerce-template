@@ -13,7 +13,7 @@ export const ProductItem = props => {
     <CartContext.Consumer>
       {cart => {
         return (
-          <div style={{ padding: 20 }}>
+          <div>
               <Grid
                 container
                 direction="column"
