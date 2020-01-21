@@ -1,14 +1,24 @@
 import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
 
 export const HomeView = class extends React.Component {
-  componentDidMount = async () => {
-  };
+  componentDidMount = async () => {};
 
   render() {
     return (
-      <div class="container">
-        <h1>Home</h1>
-      </div>
-    )
+      <Grid
+        container
+        direction="column"
+        justify="space-around"
+        alignItems="flex-start"
+        spacing={3}
+      >
+        <Grid item>
+          <Typography variant="h6" color="primary">
+            Home
+          </Typography>
+        </Grid>
+      </Grid>
+    );
   }
 };
