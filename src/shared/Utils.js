@@ -11,14 +11,3 @@ export function FormatPrice(price) {
   if (price === null) return '$0.00';
   return '$' + Number(price).toFixed(2);
 }
-
-export function FormatPhone(phone) {
-  return !phone
-    ? ''
-    : '(' +
-        phone.substr(0, 3) +
-        ') ' +
-        phone.substr(3, 3) +
-        '-' +
-        phone.substr(6);
-}
